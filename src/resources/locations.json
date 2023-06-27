@@ -1,0 +1,29 @@
+[
+    {
+      "page": 1,
+      "State": "New York",
+      "Country": "America/New_York",
+      "sunrise": "7:19",
+      "sunset": "19:32",
+      "temp": 27,
+      "precipitation":[23,29,58,33,20,73,49]
+    },
+    {
+      "page": 2,
+      "State": "Chennai",
+      "Country": "Asia/Kolkata",
+      "sunrise": "5:38",
+      "sunset": "18:38",
+      "temp": 34,
+      "precipitation":[23,29,58,33,20,73,49]
+    },
+    {
+      "page": 3,
+      "State": "Sydney",
+      "Country": "Australia/Sydney",
+      "sunrise": "7:01",
+      "sunset": "16:55",
+      "temp": 29,
+      "precipitation":[23,29,58,33,20,73,49]
+    }
+]
