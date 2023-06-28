@@ -28,7 +28,7 @@ const ChanceOfRain = () => {
 
   return (
     <>
-      <div className="bg-white h-[100px] w-[25%] p-0 ml-[5%] mt-[2%] rounded-[16px] justify-between">
+      <div className="bg-white h-[100px] w-[28%] p-0 ml-[3.5%] mt-[2%] rounded-[16px] justify-between">
         <div className="flex flex-row">
           <p className="font-custom text-black text-[13px] mt-[7%] ml-[15%] font-bold">
             Chance of Rain
