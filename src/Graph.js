@@ -121,8 +121,8 @@ export default function CardLineChart() {
     upcomingHours.push(
       <span
         key={0}
-        className="flex flex-col items-center"
-        style={{ minWidth: "110px", display: "inline-block" }}
+        className="flex flex-col items-center w-[15%] min-w-0"
+        style={{display: "inline-block" }}
       >
         {"now"}
         <div className="ml-0">{icon}</div>
@@ -147,8 +147,8 @@ export default function CardLineChart() {
       upcomingHours.push(
         <span
           key={i}
-          className="mr-2"
-          style={{ minWidth: "108px", display: "inline-block" }}
+          className="w-[15.8%] min-w-0"
+          style={{ display: "inline-block" }}
         >
           {hour}:00
           <div className="ml-1">
@@ -170,12 +170,12 @@ export default function CardLineChart() {
   };
 
   return (
-    <>
-      <div className="ml-12 relative flex flex-col min-w-0 break-words w-[750px] mb-6 shadow-lg rounded-[40px] bg-white">
+    <div className="relative w-[100%]"> 
+      <div className="ml-[4%] mr-[4%] flex flex-col mt-0 min-w-0 break-words mb-6 shadow-lg rounded-[40px] bg-white">
         <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
-              <h2 className="text-black text-[16px] ml-5 mt-2 font-semibold font-custom">
+              <h2 className="text-black text-[14px] ml-5 mt-2 font-semibold font-custom">
                 Upcoming hours
               </h2>
             </div>
@@ -199,11 +199,11 @@ export default function CardLineChart() {
         </div>
         {renderUpcomingHours()}
         <div className="flex-auto">
-          <div className="relative pl-4 pr-4 h-300-px ">
+          <div className="relative pl-4 pr-4"  style={{ height: "80px" }} >
             <canvas id="line-chart"></canvas>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

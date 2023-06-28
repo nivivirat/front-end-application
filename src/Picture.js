@@ -30,7 +30,7 @@ const Picture = () => {
         <img
           src={imageSrc}
           alt={`Page ${king_page}`}
-          className="picture-image opacity-100 transition-opacity duration-500"
+          className="picture-image opacity-100 transition-opacity duration-500 h-[20%]"
         />
       )}
     </div>
