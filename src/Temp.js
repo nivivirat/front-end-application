@@ -33,7 +33,7 @@ const Temp = () => {
     const location = locations.find((item) => item.page === king_page);
 
     // Retrieve the temperature if a matching location is found
-    const newTemperature = location ? location.temp : null;
+    const newTemperature = location ? location.temps[0] : null;
 
     // Update the temperature state with a slight delay for transition effect
     setTimeout(() => {

@@ -5,8 +5,8 @@
       "Country": "America/New_York",
       "sunrise": "7:19",
       "sunset": "19:32",
-      "temp": 27,
-      "precipitation":[23,29,58,33,20,73,49]
+      "precipitation":[23,29,58,33,20,73,49],
+      "temps":[27,28,28,29,30,29,29,28]
     },
     {
       "page": 2,
@@ -14,8 +14,8 @@
       "Country": "Asia/Kolkata",
       "sunrise": "5:38",
       "sunset": "18:38",
-      "temp": 34,
-      "precipitation":[23,29,58,33,20,73,49]
+      "precipitation":[34,56,58,44,12,22,10],
+      "temps":[36,28,28,29,30,29,29,28]
     },
     {
       "page": 3,
@@ -23,7 +23,7 @@
       "Country": "Australia/Sydney",
       "sunrise": "7:01",
       "sunset": "16:55",
-      "temp": 29,
-      "precipitation":[23,29,58,33,20,73,49]
+      "precipitation":[20,90,89,99,55,33,40],
+      "temps":[20,28,28,29,30,29,29,28]
     }
 ]

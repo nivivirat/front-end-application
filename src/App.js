@@ -34,6 +34,14 @@ const App = () => {
             <Hero name={"Isabella"}/>
             <Graph/>
           </div>
+
+          {/* More details */}
+
+          <div>
+            <p className="font-custom text-black font-black ml-12">More details of today's weather</p>
+          </div>
+
+
         </div>
       </div>
     </div>

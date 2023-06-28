@@ -4,7 +4,7 @@ import HamburgerMenu from './HamburgerMenu'
 
 const Hero = ({name}) => {
   return (
-    <div className="flex items-center justify-between p-4 mt-5">
+    <div className="flex items-center justify-between p-4 mt-5 mb-5">
       <div className="text-left ml-10">
         <h2 className="font-custom text-[20px] font-bold text-black">
           Welcome back {name}!
