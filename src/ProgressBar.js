@@ -1,5 +1,5 @@
 const ProgressBar = ({ width, value }) => {
-    // console.log(value);
+    
   return (
     <div>
       <div className="relative h-2 bg-gray-300 rounded-full"
@@ -8,7 +8,7 @@ const ProgressBar = ({ width, value }) => {
           className="absolute top-0 left-0 h-full bg-[#5c9ce5] rounded-full"
           style={{
             width: `${value}%`,
-            transition: "width 0.5s ease-in-out", // Add transition property
+            transition: "width 0.5s ease-in-out", 
           }}
         ></div>
       </div>

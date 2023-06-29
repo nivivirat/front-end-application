@@ -15,6 +15,17 @@ import FeelsLike from "./Feelslike";
 import ChanceOfRain from "./ChanceOfRain";
 
 const App = () => {
+  const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+
+  if (!isDesktop) {
+    return (
+      <div>
+        <h1>Error: Mobile Access Not Allowed</h1>
+        <p>Please access this application from a desktop device.</p>
+      </div>
+    );
+  }
+  
   return (
     <div className="bg-primary h-screen w-screen flex justify-center items-center overflow-hidden">
       <div className="flex justify-end rounded-[38px] bg-ternary h-5/6 w-[90%] overflow-hidden">
