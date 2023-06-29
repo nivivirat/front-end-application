@@ -17,7 +17,7 @@ import ChanceOfRain from "./ChanceOfRain";
 const App = () => {
   return (
     <div className="bg-primary h-screen w-screen flex justify-center items-center overflow-hidden">
-      <div className="flex justify-end rounded-[38px] bg-ternary h-5/6 w-5/6 overflow-hidden">
+      <div className="flex justify-end rounded-[38px] bg-ternary h-5/6 w-[90%] overflow-hidden">
         <div className="flex flex-col h-6/6 w-2/6">
           {/* Top section */}
           <div className="flex flex-row flex-wrap justify-between align-middle items-center">

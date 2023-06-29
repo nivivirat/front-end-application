@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import locations from "./resources/locations.json";
 import humidity_img from "./resources/humidity.svg";
+import ProgressBar from "./ProgressBar";
 
 const Humidity = () => {
   const page = useSelector((state) => state.page);
@@ -9,12 +10,32 @@ const Humidity = () => {
   const [humidity, setHumidity] = useState(0);
   const [humidityText, setHumidityText] = useState("");
 
+  const labels = ["good", "normal", "bad"];
+  const [goodHumidity, setGoodHumidity] = useState(0);
+  const [normalHumidity, setNormalHumidity] = useState(0);
+  const [badHumidity, setBadHumidity] = useState(0);
+
   useEffect(() => {
     if (location) {
+      // setHumidity(90);
       setHumidity(location.humidity);
       setHumidityText(getHumidityText(location.humidity));
+
+      if (humidity <= 30) {
+        setGoodHumidity(Math.round((humidity / 30) * 100));
+        setNormalHumidity(0);
+        setBadHumidity(0);
+      } else if (humidity > 30 && humidity < 80) {
+        setNormalHumidity(Math.round(((humidity-30) / 50) * 100));
+        setGoodHumidity(100);
+        setBadHumidity(0);
+      } else if (humidity >= 80) {
+        setBadHumidity(Math.round(((humidity-80) / 20) * 100));
+        setGoodHumidity(100);
+        setNormalHumidity(100);
+      }
     }
-  }, [location]);
+  }, [location, humidity]);
 
   const getHumidityText = (humidityValue) => {
     if (humidityValue > 80) {
@@ -52,24 +73,27 @@ const Humidity = () => {
         </div>
 
         <div className="flex flex-row text-[10px]">
-            <p className=" ml-[10%]">good</p>
-            <p className=" ml-[18%]">normal</p>
-            <p className=" ml-[11%]">bad</p>
+          <p className=" ml-[14%]">good</p>
+          <p className=" ml-[16%]">normal</p>
+          <p className=" ml-[11%]">bad</p>
         </div>
 
-        <div className="w-[80%] mx-auto">
-          <div className="relative h-2 bg-gray-300 rounded-full">
-            <div
-              className="absolute top-0 left-0 h-full bg-[#5c9ce5] rounded-full"
-              style={{
-                width: `${humidity}%`,
-                transition: "width 0.5s ease-in-out", // Add transition property
-              }}
-            ></div>
-            
-            <div className="absolute top-0 left-[33.33%] h-full bg-white w-2"></div>
-            <div className="absolute top-0 left-[66.66%] h-full bg-white w-2"></div>
-          </div>
+        <div className={"flex flex-row w-full justify-between px-8"}>
+          {labels.map((label) => {
+            return (
+              <ProgressBar
+                width={"2.5rem"}
+                value={
+                  label === "good"
+                    ? goodHumidity
+                    : label === "normal"
+                    ? normalHumidity
+                    : badHumidity
+                }
+                key={label}
+              />
+            );
+          })}
         </div>
       </div>
     </>
