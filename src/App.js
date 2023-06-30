@@ -18,57 +18,57 @@ import Mobile from "./resources/mobile/Mobile";
 const App = () => {
   const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
-  // if (!isDesktop) {
+  if (!isDesktop) {
     return (
       <Mobile/>
     );
-  // }
+  }
 
-  // return (
-  //   <div className="bg-primary h-screen w-screen flex justify-center items-center overflow-hidden">
-  //     <div className="flex justify-end rounded-[38px] bg-ternary h-5/6 w-[90%] overflow-hidden">
-  //       <div className="flex flex-col h-6/6 w-2/6">
-  //         {/* Top section */}
-  //         <div className="flex flex-row flex-wrap justify-between align-middle items-center">
-  //           <img src={add_circle} className="h-7 w-7 mt-7 ml-5"></img>
-  //           <Pagination totalPages={3} />
-  //           <Toggle />
-  //         </div>
+  return (
+    <div className="bg-primary h-screen w-screen flex justify-center items-center overflow-hidden">
+      <div className="flex justify-end rounded-[38px] bg-ternary h-5/6 w-[90%] overflow-hidden">
+        <div className="flex flex-col h-6/6 w-2/6">
+          {/* Top section */}
+          <div className="flex flex-row flex-wrap justify-between align-middle items-center">
+            <img src={add_circle} className="h-7 w-7 mt-7 ml-5"></img>
+            <Pagination totalPages={3} />
+            <Toggle />
+          </div>
 
-  //         {/* Location section */}
-  //         <div>
-  //           <Location />
-  //           <Temp />
-  //           <Picture />
-  //         </div>
-  //       </div>
-  //       <div className="rounded-[38px] bg-secondary h-6/6 w-4/6">
-  //         {/* HERO SECTION */}
-  //         <div className="flex flex-col">
-  //           <Hero name={"Isabella"} />
-  //           <Graph />
-  //         </div>
+          {/* Location section */}
+          <div>
+            <Location />
+            <Temp />
+            <Picture />
+          </div>
+        </div>
+        <div className="rounded-[38px] bg-secondary h-6/6 w-4/6">
+          {/* HERO SECTION */}
+          <div className="flex flex-col">
+            <Hero name={"Isabella"} />
+            <Graph />
+          </div>
 
-  //         {/* More details */}
+          {/* More details */}
 
-  //         <div>
-  //           <p className="font-custom text-black font-black ml-12">
-  //             More details of today's weather
-  //           </p>
-  //           <div className="flex flex-row">
-  //             <Humidity />
-  //             <Wind />
-  //             <Precipitation />
-  //           </div>
-  //           <div className="flex flex-row">
-  //             <UV />
-  //             <FeelsLike />
-  //             <ChanceOfRain />
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
+          <div>
+            <p className="font-custom text-black font-black ml-12">
+              More details of today's weather
+            </p>
+            <div className="flex flex-row">
+              <Humidity />
+              <Wind />
+              <Precipitation />
+            </div>
+            <div className="flex flex-row">
+              <UV />
+              <FeelsLike />
+              <ChanceOfRain />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 export default App;
